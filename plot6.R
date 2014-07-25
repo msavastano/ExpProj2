@@ -26,3 +26,6 @@ baseplotla=ggplot(subla, aes(year, Emissions))+ geom_boxplot(size = 1, alpha = .
   coord_cartesian(ylim = c(0, 100)) + ggtitle("LA")
 
 grid.arrange(baseplotla, baseplot, nrow = 2, main = "Baltimore City and Los Angeles Auto Emissions")
+
+dev.copy(png, file = "plot1A.png") ## Copy my plot to a PNG file
+dev.off() ## Don't forget to close the PNG device
